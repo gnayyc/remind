@@ -1,8 +1,8 @@
-# Memento
+# remind
 
-> *"Remember"* — A complete CLI for Apple Reminders
+> *"Never forget"* — A complete CLI for Apple Reminders
 
-Memento is a powerful command-line interface for Apple Reminders on macOS. Unlike other CLI tools, Memento supports **all** reminder features including start dates, multiple alarms, recurring tasks, and location-based reminders.
+remind is a powerful command-line interface for Apple Reminders on macOS. Unlike other CLI tools, remind supports **all** reminder features including start dates, multiple alarms, recurring tasks, and location-based reminders.
 
 ## Features
 
@@ -121,7 +121,7 @@ remind list-delete "Old List" --force
 
 ## Date Formats
 
-Memento understands various date formats:
+remind understands various date formats:
 
 | Format | Example |
 |--------|---------|
@@ -133,14 +133,14 @@ Memento understands various date formats:
 | Next Weekday | `next monday`, `next friday` |
 | Time Only | `9am`, `14:30` (assumes today) |
 
-## Why Memento?
+## Why remind?
 
 Existing Apple Reminders CLI tools (`reminders-cli`, `remindctl`) lack support for:
 - **Start dates** — when the reminder should appear
 - **Custom remind dates** — notification time separate from due date
 - **Multiple alarms**
 
-Memento fills this gap with complete EventKit integration.
+remind fills this gap with complete EventKit integration.
 
 ## Requirements
 
@@ -149,7 +149,7 @@ Memento fills this gap with complete EventKit integration.
 
 ## Permissions
 
-On first run, Memento will request access to Reminders. You can also check status:
+On first run, remind will request access to Reminders. You can also check status:
 
 ```bash
 remind status
