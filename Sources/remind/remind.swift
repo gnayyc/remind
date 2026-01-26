@@ -7,7 +7,7 @@ import Foundation
 @main
 struct Remind: AsyncParsableCommand {
     static let configuration = CommandConfiguration(
-        commandName: "memento",
+        commandName: "remind",
         abstract: "Complete CLI for Apple Reminders",
         version: "1.0.0",
         subcommands: [
@@ -455,7 +455,7 @@ struct Status: AsyncParsableCommand {
         
         if status != "fullAccess" {
             print("\nTo grant access:")
-            print("  System Settings → Privacy & Security → Reminders → enable 'memento'")
+            print("  System Settings → Privacy & Security → Reminders → enable 'remind'")
         }
     }
 }

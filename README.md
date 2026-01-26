@@ -26,16 +26,16 @@ Memento is a powerful command-line interface for Apple Reminders on macOS. Unlik
 Requires Xcode Command Line Tools and macOS 14+.
 
 ```bash
-git clone https://github.com/gnayyc/memento.git
-cd memento
+git clone https://github.com/gnayyc/remind.git
+cd remind
 swift build -c release
-cp .build/release/memento /usr/local/bin/
+cp .build/release/remind /usr/local/bin/
 ```
 
 ### Homebrew (coming soon)
 
 ```bash
-brew install gnayyc/tap/memento
+brew install gnayyc/tap/remind
 ```
 
 ## Usage
@@ -44,22 +44,22 @@ brew install gnayyc/tap/memento
 
 ```bash
 # Simple
-memento add "Buy groceries"
+remind add "Buy groceries"
 
 # With dates (this is the killer feature!)
-memento add "Submit report" \
+remind add "Submit report" \
   --list "Work" \
   --start "today" \
   --due "2026-01-31" \
   --remind "2026-01-30 09:00"
 
 # With recurrence
-memento add "Weekly review" \
+remind add "Weekly review" \
   --recurrence weekly \
   --due "next monday"
 
 # With location trigger
-memento add "Buy milk" \
+remind add "Buy milk" \
   --location "Supermarket" \
   --lat 25.033 \
   --lon 121.565 \
@@ -71,52 +71,52 @@ memento add "Buy milk" \
 
 ```bash
 # Show all incomplete reminders
-memento all
+remind all
 
 # Show reminders in a specific list
-memento show "Work"
+remind show "Work"
 
 # Filter by date
-memento all --filter today
-memento all --filter week
+remind all --filter today
+remind all --filter week
 
 # Include completed
-memento show "Work" --include-completed
+remind show "Work" --include-completed
 
 # JSON output for scripting
-memento all --json
+remind all --json
 ```
 
 ### Manage Reminders
 
 ```bash
 # Complete by index
-memento complete 0 --list "Work"
+remind complete 0 --list "Work"
 
 # Complete by ID
-memento complete ABC123-DEF456
+remind complete ABC123-DEF456
 
 # Edit
-memento edit ABC123 --due "tomorrow" --priority high
+remind edit ABC123 --due "tomorrow" --priority high
 
 # Delete
-memento delete ABC123 --force
+remind delete ABC123 --force
 ```
 
 ### List Management
 
 ```bash
 # Show all lists
-memento lists
+remind lists
 
 # Create a new list
-memento list-create "Projects"
+remind list-create "Projects"
 
 # Rename
-memento list-rename "Work" "Office"
+remind list-rename "Work" "Office"
 
 # Delete
-memento list-delete "Old List" --force
+remind list-delete "Old List" --force
 ```
 
 ## Date Formats
@@ -152,11 +152,11 @@ Memento fills this gap with complete EventKit integration.
 On first run, Memento will request access to Reminders. You can also check status:
 
 ```bash
-memento status
+remind status
 ```
 
 If denied, grant access in:
-**System Settings → Privacy & Security → Reminders → enable 'memento'**
+**System Settings → Privacy & Security → Reminders → enable 'remind'**
 
 ## License
 
