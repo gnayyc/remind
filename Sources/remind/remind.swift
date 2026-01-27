@@ -8,9 +8,10 @@ import Foundation
 struct Remind: AsyncParsableCommand {
     static let configuration = CommandConfiguration(
         commandName: "remind",
-        abstract: "Complete CLI for Apple Reminders",
-        version: "1.0.0",
+        abstract: "Complete CLI for Apple Reminders and Calendar",
+        version: "2.0.0",
         subcommands: [
+            // Reminder commands
             Add.self,
             Show.self,
             ShowAll.self,
@@ -23,6 +24,16 @@ struct Remind: AsyncParsableCommand {
             ListRename.self,
             ListDelete.self,
             Status.self,
+            // Calendar commands
+            Event.self,
+            Cal.self,
+            // Template commands
+            TemplateCmd.self,
+            // Unified commands
+            Today.self,
+            Week.self,
+            Agenda.self,
+            Convert.self,
         ],
         defaultSubcommand: ShowAll.self
     )
