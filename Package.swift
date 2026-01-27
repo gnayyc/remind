@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "remind",
+    name: "pin",
     platforms: [.macOS(.v14)],
     dependencies: [
         .package(url: "https://github.com/apple/swift-argument-parser", from: "1.3.0"),
@@ -10,11 +10,12 @@ let package = Package(
     ],
     targets: [
         .executableTarget(
-            name: "remind",
+            name: "pin",
             dependencies: [
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
                 .product(name: "Yams", package: "Yams"),
-            ]
+            ],
+            path: "Sources/pin"
         ),
     ]
 )

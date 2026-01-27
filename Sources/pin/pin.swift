@@ -5,9 +5,9 @@ import Foundation
 // MARK: - Main CLI
 
 @main
-struct Remind: AsyncParsableCommand {
+struct Pin: AsyncParsableCommand {
     static let configuration = CommandConfiguration(
-        commandName: "remind",
+        commandName: "pin",
         abstract: "Complete CLI for Apple Reminders and Calendar",
         version: "2.0.0",
         subcommands: [
