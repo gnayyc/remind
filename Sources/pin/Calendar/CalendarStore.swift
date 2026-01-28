@@ -111,6 +111,8 @@ actor CalendarStore {
         let cal: EKCalendar
         if let name = calendarName {
             cal = try findCalendar(named: name)
+        } else if let preferredCal = try? findCalendar(named: "cyyang") {
+            cal = preferredCal
         } else if let defaultCal = eventStore.defaultCalendarForNewEvents {
             cal = defaultCal
         } else {
